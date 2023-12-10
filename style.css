@@ -1,0 +1,191 @@
+.header-container {
+  display: flex;
+  align-items: flex-start; /* Alinhar itens no canto superior */
+  padding: 20px; /* Adicione algum espaço ao redor do conteúdo do cabeçalho */
+}
+
+.title {
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  flex: 1;
+  margin-right: 5px; /* Adicionado para empurrar .title para o canto superior esquerdo */
+}
+
+.special-button {
+  position: absolute;
+  top: 30px; /* Distância do topo */
+  right: 30px; /* Distância da direita */
+  border: none;
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(55, 218, 55, 0);
+  padding: 10px; /* Ajuste o padding conforme necessário */
+  margin-left: 20px; /* Ajuste a margem conforme necessário */
+}
+
+.special-button img {
+  width: 30px; /* Ajuste a largura conforme necessário */
+  height: auto; /* Mantém a proporção original da imagem */
+}
+
+.special-button:hover {
+  transform: scale(1.0);
+}
+
+.subject {
+  text-align: center;
+  margin-top: 0; /* Remova a margem superior para que fique no canto superior */
+  font-family: 'DM Serif Display', serif;
+}
+
+
+/* Restante do seu CSS permanece inalterado */
+
+
+.term {
+  border: solid 5px black;
+  border-radius: 15px;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+/* Estilo para a div que contém a imagem */
+.imageflashcard {
+  width: 300px; /* Largura desejada para as imagens */
+  height: auto;
+  text-align: center;
+  margin: 0 auto; 
+}
+
+.image-aswer{
+  display: none;
+}
+
+/* Estilo para a imagem dentro da div */
+#imagemExibida {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#imagemExibida1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.classifiers{
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+.Difícil{
+  color: white;
+  background-color: red;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.Médio{
+  color: white;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.Fácil{
+  color: white;
+  background-color: green;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.definition {
+  border: solid 5px black;
+  border-radius: 15px;
+  text-align: center;
+  width: 45%;
+  margin: auto;
+  margin-top: 10px;
+  display: none;
+}
+
+.button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.next {
+  display: none;
+}
+
+button {
+  color: white;
+  background-color: rgb(55, 218, 55);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* The side navigation menu */
+.subjectmenu{
+  padding: 20px;
+  font-family: 'DM Serif Display', serif;
+  color: white;
+}
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
