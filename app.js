@@ -10,10 +10,8 @@ const imageAswer = document.querySelector('.image-aswer'); // Substituído de im
 
 // Substitua 'YOUR_SPREADSHEET_ID' pelo ID da sua planilha.
 const spreadsheetId = '1mACFkwwgtmQpTvC51Qw9UAW1Va9dmAzUD7rBi-QJAu8';
-
 // Substitua 'YOUR_API_KEY' pela sua chave de API.
 const apiKey = 'AIzaSyBqQDNeQCrFwMzKo-D80PKSMbOpd_GxeU4';
-
 // URL da API do Google Sheets
 const sheetsURL = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/A1:D100?key=${apiKey}`;
 
@@ -45,6 +43,7 @@ function showImageAswer() {
     imageAswer.style.display = 'none';
   }
 }
+
 function showTerm() {
   // Verifica se há um termo na linha atual
   const hasTerm = data[currentRow] && data[currentRow].length >= 1 && data[currentRow][0];
@@ -86,8 +85,6 @@ function getNextFlashcard() {
 
 checkButton.addEventListener('click', function() {
   showImageAswer(); // Adiciona a chamada da função para mostrar a imagem da resposta
-  imageAswer.style.display = 'block'; // Certifique-se de que a imagem da resposta esteja visível aqui
-
   definition.style.display = 'block';
   classifiers.style.display = 'block';
   nextButton.style.display = 'inline-block';
@@ -99,6 +96,14 @@ nextButton.addEventListener('click', function() {
 
   getNextFlashcard();
 });
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 // Carregue o primeiro flashcard ao iniciar
 getNextFlashcard();
