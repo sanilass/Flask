@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Flash card app</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Sistemas.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
   <script src="https://apis.google.com/js/api.js"></script>
-
 </head>
-
-<body onload="getNextFlashcard()">
+<body onload="fetchDataAndShowImage()">
 
   <div class="header-container">
     <h1 class="title">Daniel Salinas</h1>
@@ -23,50 +20,36 @@
   </div>
 
   <div>
-    <h3 class="subject">Sistema Respiratório</h3>
-  </div>
-
-  <div class="term">
-    <h3> Term </h3>
-  </div>
-
-<div class="imageflashcard">
-  <div class="image-question">
-    <!-- A tag <img> é usada para exibir uma imagem -->
-    <img id="imagemExibida" alt="Descrição da Imagem">
-  </div>
-
-  <div class="image-aswer">
-    <!-- A tag <img> é usada para exibir uma imagem -->
-    <img id="imagemExibida1" alt="Descrição da Imagem">
-  </div>
-</div>
- 
-<div class="definition">
-    <h3> Definition </h3>
-</div>
-
-  <div class="classifiers">
-    <button class="Difícil">Difícil</button>
-    <button class="Médio">Médio</button>
-    <button class="Fácil">Fácil</button>
-  </div>
-
-  <div class="button">
-    <button class="check"> Ver Resposta </button>
-    <button class="next"> Próximo </button>
-  </div>
-
-  <div id="mySidenav" class="sidenav">
-      <h1 class="subjectmenu">Sistema Respiratório</h1>
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="Sistemas.html">Sistemas</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+    <h3 class="subject">Sistemas do Corpo Humano</h3>
   </div>
   
-  <script src="app.js"></script>
+  <!-- Caixinha que mostra qual o tema, clicando nela abre o material do sistema -->
+  <div class="respiratorio">
+    <a href="respiratorio.html">
+      <div class="imagemrespiratorio">
+        <img id="imagemrespiratorio" alt="Descrição da Imagem">
+      </div>
+      <h3> Sistema Respiratório </h3>
+    </a>
+  </div>
+
+  <div class="digestorio">
+    <div class="imagemdigestorio">
+      <img id="imagemdigestorio" alt="Descrição da Imagem">
+    </div>
+    <h3> Sistema Digestório </h3>
+  </div>
+  
+  <div id="mySidenav" class="sidenav">
+    <h1 class="subjectmenu">Menu</h1>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <script src="Sistemas.js"></script>
 
 </body>
 </html>
